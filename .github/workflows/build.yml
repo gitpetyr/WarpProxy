@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 env:
-  IMAGE_NAME: ${{ secrets.DOCKERHUB_USERNAME }}/vless-warp
+  IMAGE_NAME: ${{ secrets.DOCKERHUB_USERNAME }}/warp-proxy-vless
 
 jobs:
   build:
