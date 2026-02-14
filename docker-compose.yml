@@ -1,6 +1,6 @@
 services:
   vless-warp:
-    image: zhongxiaoma/vless-warp:latest
+    image: zhongxiaoma/warp-proxy-vless:latest
     container_name: vless-warp
     restart: unless-stopped
     ports:
