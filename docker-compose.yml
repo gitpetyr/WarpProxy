@@ -1,0 +1,19 @@
+services:
+  vless-warp:
+    build: .
+    container_name: vless-warp
+    restart: unless-stopped
+    ports:
+      - "8443:8443"
+    environment:
+      # Generate a fixed UUID: uuidgen or use any valid v4 UUID
+      - VLESS_UUID=f5e1a870-c4e1-4a6b-b5f3-8c1e2d3f4a5b
+      - VLESS_PORT=8443
+      - VLESS_PATH=/vless
+    cap_add:
+      - NET_ADMIN
+    volumes:
+      - warp_data:/var/lib/cloudflare-warp
+
+volumes:
+  warp_data:
